@@ -9,7 +9,7 @@ const Layout = () => {
       <Header />
       <div className='flex overflow-hidden h-full'>
         <SideNav />
-        <div className='h-full overflow-y-scroll'><Outlet /></div>
+        <div className='h-full overflow-y-auto'><Outlet /></div>
       </div>
     </div>
   )

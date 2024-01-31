@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { blogPosts } from '../utils/constansts'
 import BlogCard from '../components/BlogCard'
 import NewBlog from '../components/NewBlog'
+import { useUserContext } from '../utils/context'
 
 const Blog = () => {
   const [isOpened, setIsOpened] = useState(false)
+  const { fetchBlog, getAdmin } = useUserContext()
 
   const opener = () => {
     setIsOpened(true)
@@ -12,6 +14,11 @@ const Blog = () => {
   const closer = () => {
       setIsOpened(false)
   }
+
+  useEffect(() => {
+    fetchBlog()
+    getAdmin()
+  }, [])
 
   return (
     <div className='px-12 py-6'>
@@ -35,6 +42,7 @@ const Blog = () => {
           ))
         }
       </div>
+      {isOpened && <NewBlog isOpened={isOpened} closer={closer}/>}
     </div>
   )
 }

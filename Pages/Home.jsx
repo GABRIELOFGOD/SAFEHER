@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { dashboardNav } from '../utils/constansts'
 import { Link } from 'react-router-dom'
 import SlideCards from '../components/SlideCards'
 import { useUserContext } from '../utils/context'
+import LoginAdmin from './LoginAdmin'
 
 const Home = () => {
-  const {username} = useUserContext()
+  const {username, getAdmin} = useUserContext()
 
-  if(!username) location.assign('/login')
+  // if(!username) location.assign('/login')
+
+  useEffect(() => {
+    getAdmin()
+  }, [])
 
   return (
     <div className='px-12 py-6'>
-      <p className='text-xl text-primaryDark font-bold'>Welcome User soso</p>
+      {username ? <p className='text-xl text-primaryDark font-bold'>Welcome {username}</p> : <p className='text-xl text-primaryDark font-bold'>Welcome guest</p>}
       <div className='flex gap-10 capitalize mt-12 flex-wrap'>
         {
           dashboardNav.map(item => (
@@ -25,6 +30,7 @@ const Home = () => {
           ))
         }
       </div>
+      {!username && <LoginAdmin / >}
     </div>
   )
 }

@@ -9,6 +9,7 @@ import Urls from '../Pages/Urls';
 import Profile from '../Pages/Profile';
 import { UserContextProvider } from '../utils/context';
 import LoginAdmin from '../Pages/LoginAdmin';
+import Register from '../Pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -39,12 +40,16 @@ const router = createBrowserRouter([
         path: 'profile',
         element: <Profile />
       },
+      {
+        path: 'register',
+        element: <Register />
+      },
     ]
   },
-  {
-    path: 'login',
-    element: <LoginAdmin />
-  }
+  // {
+  //   path: 'login',
+  //   element: <LoginAdmin />
+  // }
 ])
 
 const App = () => {

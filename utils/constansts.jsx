@@ -3,6 +3,7 @@ import { BsFillPostcardFill } from "react-icons/bs";
 import { TbWorldCheck, TbExplicitOff } from "react-icons/tb";
 import { IoMdMail } from "react-icons/io";
 import { FaUser } from "react-icons/fa";
+import { GiArchiveRegister } from "react-icons/gi";
 
 export const sideNav = [
     {
@@ -41,6 +42,12 @@ export const sideNav = [
         path: 'profile',
         icon: <FaUser />
     },
+    {
+        id: 7,
+        element: 'Register new Admin',
+        path: 'register',
+        icon: <GiArchiveRegister />
+    }
 ]
 
 export const dashboardNav = [
@@ -130,5 +137,5 @@ export const blogPosts = [
         postedBy: 'Gabriel Ayodele',
         datePost: 'Aug. 23, 2023',
         image: '/images/join-us.jpg'
-    }
+    },
 ]

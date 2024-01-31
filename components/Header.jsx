@@ -3,8 +3,11 @@ const logo = '/images/safer-logo.png';
 import { CgProfile } from "react-icons/cg";
 import { IoSearch } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { useUserContext } from '../utils/context';
 
 const Header = () => {
+  const {username} = useUserContext()
+
   return (
     <div className='flex sticky top-0 justify-between px-10 shadow-md bg-white'>
       <img src={logo} alt="Logo" className='w-[100px] my-auto' />
@@ -14,7 +17,7 @@ const Header = () => {
       </form>
       <Link className='flex rounded-full gap-2 p-2 bg-[#efefef] my-auto'>
         <CgProfile className='text-2xl ' />
-        <p className="font-bold my-auto text-textGray text-[12px] whitespace-nowrap">Sample Username</p>
+        <p className="font-bold my-auto text-textGray text-[12px] whitespace-nowrap">{username}</p>
       </Link>
     </div>
   )

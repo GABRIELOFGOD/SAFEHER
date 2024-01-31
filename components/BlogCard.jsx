@@ -43,9 +43,9 @@ const BlogCard = ({title, image, body, postedBy, date, id}) => {
       <div onMouseEnter={openMenu} onMouseLeave={closeMenu} className={`absolute top-1 right-1 rounded-full h-8 w-8 text-black p-2 bg-[#efefef] hover:bg-[#efefef] bg-opacity-20 hover:bg-opacity-50  ${menunu ? 'flex' : 'hidden'} `}>
         <CiMenuKebab />
         <div className={`capitalize right-1 top-7 duration-200 bg-white px-4 py-2 absolute rounded-md whitespace-nowrap font-semibold text-[12px] flex-col gap-3 ${menu ? 'flex' : 'hidden'} `}>
-          <p onClick={navigate} className='hover:text-primary'>View Blog</p>
-          <p onClick={opener} className='hover:text-primary'>edit Blog</p>
-          <p className='hover:text-primary'>delete Blog</p>
+          <p onClick={navigate} className='hover:text-primary cursor-pointer'>View Blog</p>
+          <p onClick={opener} className='hover:text-primary cursor-pointer'>edit Blog</p>
+          <p className='hover:text-primary cursor-pointer'>delete Blog</p>
         </div>
       </div>
         <img src={image} className='w-full' alt="Blog-image" />

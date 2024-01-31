@@ -25,3 +25,9 @@ html, body{
 .sidebar .active{
     background: #001F4D;
 }
+
+::-webkit-scrollbar{
+    width: 5px;
+    background: #001F4D;
+    /* background: #3A57E8; */
+}
