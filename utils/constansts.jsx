@@ -49,7 +49,7 @@ export const dashboardNav = [
         element: 'blog posts',
         path: 'blogs',
         icon: <BsFillPostcardFill />,
-        count: 34
+        count: 14
     },
     {
         id: 3,

@@ -7,6 +7,8 @@ import Explicit from '../Pages/Explicit';
 import Newsletters from '../Pages/Newsletters';
 import Urls from '../Pages/Urls';
 import Profile from '../Pages/Profile';
+import { UserContextProvider } from '../utils/context';
+import LoginAdmin from '../Pages/LoginAdmin';
 
 const router = createBrowserRouter([
   {
@@ -38,12 +40,18 @@ const router = createBrowserRouter([
         element: <Profile />
       },
     ]
+  },
+  {
+    path: 'login',
+    element: <LoginAdmin />
   }
 ])
 
 const App = () => {
   return (
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router} />
+    </UserContextProvider>
   )
 }
 
