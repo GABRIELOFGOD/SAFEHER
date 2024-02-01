@@ -4,9 +4,23 @@ import { Link } from 'react-router-dom'
 import SlideCards from '../components/SlideCards'
 import { useUserContext } from '../utils/context'
 import LoginAdmin from './LoginAdmin'
+import NoConnection from '../components/NoConnection'
 
 const Home = () => {
   const {username, getAdmin} = useUserContext()
+  const [isConnected, setIsConnected] = useState(true)
+
+  const checkConnection = () => {
+    if(navigator.onLine == false){
+      setIsConnected(false)
+    }else{
+      setIsConnected(true)
+    }
+  }
+  useEffect(() => {
+    checkConnection()
+  }, [])
+
 
   // if(!username) location.assign('/login')
 
@@ -15,7 +29,8 @@ const Home = () => {
   }, [])
 
   return (
-    <div className='px-12 py-6'>
+    <div>
+      {isConnected ? <div className='px-12 py-6'>
       {username ? <p className='text-xl text-primaryDark font-bold'>Welcome {username}</p> : <p className='text-xl text-primaryDark font-bold'>Welcome guest</p>}
       <div className='flex gap-10 capitalize mt-12 flex-wrap'>
         {
@@ -31,6 +46,7 @@ const Home = () => {
         }
       </div>
       {!username && <LoginAdmin / >}
+    </div> : <NoConnection />}
     </div>
   )
 }

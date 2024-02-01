@@ -10,6 +10,7 @@ export const UserContextProvider = ({children}) => {
     const [loginError, setLoginError] = useState(null);
     const [loginMsg, setLoginMsg] = useState(null);
     const [blog, setBlog] = useState(null);
+    // const [blogPost]
 
     const logout = async() => {
         console.log('clicked')
@@ -34,6 +35,7 @@ export const UserContextProvider = ({children}) => {
 
         const response = await res.json()
         if(!res.ok) {
+            console.log(response)
             toast.error(response.error, {
                 position: 'top-right',
                 className: 'text-[12px]',
@@ -63,7 +65,7 @@ export const UserContextProvider = ({children}) => {
             })
         }
         if(res.ok){
-            console.log(response)
+            setBlog(response.data)
         }
     }
 
@@ -135,7 +137,8 @@ export const UserContextProvider = ({children}) => {
                 setUsername,
                 logout,
                 postBlog,
-                fetchBlog
+                fetchBlog,
+                blog
             }}
         >
             {children}
