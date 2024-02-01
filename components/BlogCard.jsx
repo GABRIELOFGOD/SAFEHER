@@ -48,7 +48,7 @@ const BlogCard = ({title, image, body, postedBy, date, id}) => {
           <p className='hover:text-primary cursor-pointer'>delete Blog</p>
         </div>
       </div>
-        <img src={image} className='w-full' alt="Blog-image" />
+        {image && <img src={image} className='w-full' alt="Blog-image" />}
         <div className='p-3'>
             <div>
                 <p className="font-bold text-center text-lg">{title}</p>

@@ -4,6 +4,7 @@ import BlogCard from '../components/BlogCard'
 import NewBlog from '../components/NewBlog'
 import { useUserContext } from '../utils/context'
 import NoConnection from '../components/NoConnection'
+import LoginAdmin from './LoginAdmin'
 
 const Blog = () => {
   const [isOpened, setIsOpened] = useState(false)
@@ -19,14 +20,14 @@ const Blog = () => {
   }
   useEffect(() => {
     checkConnection()
-  }, [])
+  }, [navigator.onLine])
 
 
   // if(!username) location.assign('/login')
 
-  useEffect(() => {
-    getAdmin()
-  }, [])
+  // useEffect(() => {
+  //   getAdmin()
+  // }, [])
 
   const opener = () => {
     setIsOpened(true)
@@ -38,7 +39,9 @@ const Blog = () => {
   useEffect(() => {
     fetchBlog()
     getAdmin()
+    checkConnection()
   }, [])
+
 
   return (
     <div>
@@ -49,14 +52,14 @@ const Blog = () => {
       </div>
       {blog ? <div className='flex flex-wrap gap-10'>
         {
-          blog?.map(blog => (
+          blog?.slice(0).reverse().map(blog => (
             <div to={`/blog/${blog.id}`} key={blog.id}>
               <BlogCard
                 id={blog.title}
                 title={blog.title}
                 body={blog.body}
                 date={blog.datePost}
-                postedBy={blog.postedBy}
+                postedBy={blog.posterName}
                 image={blog.image}
               />
             </div>
@@ -67,6 +70,7 @@ const Blog = () => {
           <p className="text-primaryDark text-center font-bold mt-10 text-xl">{username} Please help post a blog so here won't be empty</p>
         </div>}
       {isOpened && <NewBlog isOpened={isOpened} closer={closer}/>}
+      {!username && <LoginAdmin / >}
     </div> : <NoConnection />}
     </div>
   )

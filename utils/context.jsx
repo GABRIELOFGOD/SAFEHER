@@ -14,7 +14,7 @@ export const UserContextProvider = ({children}) => {
 
     const logout = async() => {
         console.log('clicked')
-        const res = await fetch('http://localhost:3000/admin/logout', {credentials: 'include'})
+        const res = await fetch(`${url}/admin/logout`, {credentials: 'include'})
         const response = await res.json()
         console.log(response)
         setUsername(null)
@@ -70,7 +70,7 @@ export const UserContextProvider = ({children}) => {
     }
 
     const getAdmin = async () => {
-        const res = await fetch('http://localhost:3000/admin/login', { credentials: 'include' })
+        const res = await fetch(`${url}/admin/login`, { credentials: 'include' })
         const response = await res.json()
         if(!res.ok){
             setLoginError(response.error)
@@ -89,7 +89,7 @@ export const UserContextProvider = ({children}) => {
 
     const adminLogin = async (e, email, password) => {
         e.preventDefault()
-        const res = await fetch('http://localhost:3000/admin/login', {
+        const res = await fetch(`${url}/admin/login`, {
             method: 'POST',
             body: JSON.stringify({email, password}),
             headers: {

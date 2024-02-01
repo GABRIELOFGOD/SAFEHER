@@ -13,7 +13,7 @@ const Header = () => {
       <img src={logo} alt="Logo" className='w-[100px] my-auto' />
       <form className='my-auto relative w-fit' onSubmit={e => e.preventDefault()}>
         <IoSearch className='absolute text-textGray text-xl flex top-2 left-2' />
-        <input className='h-[40px] rounded-md outline-none font-bold search text-[12px] border w-[400px] bg-[#efefef] px-10 border-black' type="search" placeholder='Search...' />
+        <input disabled className='h-[40px] rounded-md outline-none font-bold search text-[12px] border w-[400px] bg-[#efefef] px-10 border-black' type="search" placeholder='Search...' />
       </form>
       <Link className='flex rounded-full gap-2 p-2 bg-[#efefef] my-auto'>
         <CgProfile className='text-2xl ' />

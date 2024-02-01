@@ -18,7 +18,7 @@ const LoginAdmin = () => {
 
   return (
     <div className={`absolute duration-300 flex items-center justify-center z-50 bg-primary bg-opacity-90 top-0 left-0 h-[100vh] w-[100vw]`}>
-        <div className='p-12 bg-white relative rounded-xl'>
+        <div className='p-12 bg-white shadow-sm shadow-gray-800 relative rounded-xl'>
             {/* <MdOutlineClose className='border text-primaryDark border-primaryDark rounded-full text-3xl absolute right-6 top-6 cursor-pointer' /> */}
             <p className="text-center text-2xl mb-10 text-primaryDark font-bold">Administrative Login</p>
             {/* {loginError && <p className='w-full border-2 border-red-800 text-[10px] mb-3 p-1 capitalize rounded-md text-red-800 bg-red-300 text-center'>{loginError}</p>} */}
