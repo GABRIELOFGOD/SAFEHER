@@ -3,6 +3,7 @@ import Header from './Header'
 import SideNav from './SideNav'
 import { Outlet } from 'react-router-dom'
 import NoConnection from './NoConnection'
+import { Toaster } from 'react-hot-toast'
 
 const Layout = () => {
   const [isConnected, setIsConnected] = useState(true)
@@ -24,7 +25,7 @@ const Layout = () => {
         <Header />
         <div className='flex overflow-hidden h-full'>
           <SideNav />
-          <div className='h-full overflow-y-auto'><Outlet /></div>
+          <div className='h-full overflow-y-auto'><Toaster /> <Outlet /></div>
         </div>
       </div>: <NoConnection />}
     </div>

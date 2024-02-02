@@ -10,6 +10,7 @@ import Profile from '../Pages/Profile';
 import { UserContextProvider } from '../utils/context';
 import LoginAdmin from '../Pages/LoginAdmin';
 import Register from '../Pages/Register';
+import ReviewUrl from '../components/ReviewUrl';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path: 'register',
         element: <Register />
       },
+      {
+        path: 'url/:id',
+        element: <ReviewUrl/>
+      }
     ]
   },
   // {

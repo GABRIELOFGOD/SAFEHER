@@ -48,7 +48,7 @@ const Blog = () => {
       {isConnected ? <div className='px-12 py-6'>
       <div className="justify-between flex mb-10">
         <p className="text-2xl text-primaryDark capitalize font-bold">This are the recent blogs</p>
-        <button onClick={opener} className='bg-primaryDark whitespace-nowrap rounded-md py-2 px-4 font-bold text-[12px] text-white'>Post New Blog</button>
+        <button onClick={opener} className='bg-primaryDark whitespace-nowrap duration-300 hover:bg-primary rounded-md py-2 px-4 font-bold text-[12px] text-white'>Post New Blog</button>
       </div>
       {blog ? <div className='flex flex-wrap gap-10'>
         {

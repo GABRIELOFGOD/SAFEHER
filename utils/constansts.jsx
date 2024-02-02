@@ -139,3 +139,39 @@ export const blogPosts = [
         image: '/images/join-us.jpg'
     },
 ]
+
+export const urls = [
+    {
+        _id: 1,
+        url: 'https://www.google.com',
+        image: [
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+        ]
+    },
+    {
+        _id: 2,
+        url: 'https://www.unknown.com',
+        image: [
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+        ]
+    },
+    {
+        _id: 3,
+        url: 'https://www.cloud.com',
+        image: [
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+            'https://avatars.githubusercontent.com/u/114562466?v=4', 'https://res.cloudinary.com/dhzqi5gqy/image/upload/v1706791492/cajdots8pjtmxqc8ulpg.jpg',
+        ]
+    }
+]
